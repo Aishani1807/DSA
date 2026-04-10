@@ -57,6 +57,9 @@ public:
 };
 
 int main() {
+    int n;
+    int priceRangelow, priceRangehigh;
+    string cont = "Yes";
     InventorySystem inv;
     
     // Sample Inputs
@@ -65,12 +68,27 @@ int main() {
     inv.addOrUpdateProduct(3, "Gaming Monitor", 300.00);
     inv.addOrUpdateProduct(4, "USB-C Cable", 15.00);
     inv.addOrUpdateProduct(5, "Webcam", 65.00);
+    
+    while(cont == "Yes") {
+    cout<<endl;
+    cout<< "Enter the product ID that needs to be searched: ";
+    cin >> n;
 
-    cout << "\n--- Searching ID 3 ---\n";
-    inv.searchByID(3);
+    cout << "--- Searching ID ---\n";
+    inv.searchByID(n);
 
-    cout << "\n--- Range Query ($20 to $100) ---\n";
-    inv.getProductsInRange(20.0, 100.0);
+    cout<<endl;
+    cout<< "Enter price range (low, high): ";
+    cin >> priceRangelow >> priceRangehigh;
 
+    cout << "--- Range Query  ---\n";
+    inv.getProductsInRange(priceRangelow, priceRangehigh);
+
+    cout<<endl;
+    cout << "Do you want to continue? (Yes/No): ";
+    cin >> cont;
+
+    cout<<endl;
+    }
     return 0;
 }
