@@ -2,7 +2,8 @@
 Managing a dynamic product inventory requires a system that handles frequent updates (additions/deletions) while maintaining sorted order. The primary challenge is to support efficient range queries (finding products between two price points) and fast search (by ID) simultaneously as the inventory fluctuates.
 
 # Objective:
-To design and implement a robust inventory management system that:Maintains a sorted collection of products by Price and Product ID.Achieves logarithmic time complexity (O(log n)) for search, insertion, and deletion.Supports efficient range-based filtering for price-sensitive queries.
+To design and implement a robust inventory management system that: Maintains a sorted collection of products by Price and Product ID. 
+Achieves logarithmic time complexity (O(log n)) for search, insertion, and deletion.Supports efficient range-based filtering for price-sensitive queries.
 
 # Data Fields:
 The system utilizes a Product structure:
